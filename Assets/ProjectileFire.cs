@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class ProjectileFire : MonoBehaviour
@@ -16,9 +17,10 @@ public class ProjectileFire : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire1")) ;
+        if (Input.GetButtonDown("Fire1"))
         {
             Instantiate(projectilePrefab, transform.position, Quaternion.identity);
+            Debug.Log("Strzelam");
         }
      }
 }
